@@ -41,12 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IValidatable.cs" />
-    <Compile Include="ValidationRule.cs" />
+    <Compile Include="Contracts\IValidatable.cs" />
+    <Compile Include="Contracts\IValidationResult.cs" />
+    <Compile Include="Contracts\IValidationRule.cs" />
+    <Compile Include="Contracts\IValidator.cs" />
+    <Compile Include="Model\ValidationRule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ValidationResult.cs" />
-    <Compile Include="Validator.cs" />
+    <Compile Include="Model\ValidationResult.cs" />
+    <Compile Include="Providers\Validator.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

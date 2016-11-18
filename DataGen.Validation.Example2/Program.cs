@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Validation;
+using Validation.Contracts;
+using Validation.Model;
+using Validation.Providers;
 
 namespace Validation.Example2
 {
@@ -18,7 +17,7 @@ namespace Validation.Example2
                 Email = "johnemail.com",
             };
 
-            var validationRules = new List<ValidationRule<User>>()
+            var validationRules = new List<IValidationRule<User>>()
             {
                 new ValidationRule<User>(u => !string.IsNullOrWhiteSpace(u.Name), "Has to have a name."),
                 new ValidationRule<User>(u => u.Age >= 18, "Has to be adult."),
@@ -26,7 +25,7 @@ namespace Validation.Example2
                 new ValidationRule<User>(u => u.Email?.IndexOf('@') > 0, "Email has to be in correct format."),
             };
 
-            Validator<User> userValidator = new Validator<User>( validationRules);
+            IValidator<User> userValidator = new Validator<User>( validationRules);
             var validationResult = userValidator.Validate(user);
             Console.WriteLine(validationResult.ToString());
 
