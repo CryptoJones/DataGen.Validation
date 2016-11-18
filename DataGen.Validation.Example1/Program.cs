@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Validation.Core;
+using Validation;
 
-namespace Validation
+namespace Validation.Example1
 {
     class Program
     {
@@ -13,27 +13,26 @@ namespace Validation
         {
             User user = new User()
             {
-                Name = "Karol",
+                Name = "John",
                 Age = 17,
-                Email = "someemail.com",
+                Email = "johnemail.com",
                 Validator = new Validator<User>(new List<ValidationRule<User>>
                 {
-                    new ValidationRule<User>(u => !string.IsNullOrWhiteSpace(u.Name), "Musi sie jakoś nazywać."),
-                    new ValidationRule<User>(u => u.Age >= 18, "Musi mieć 18 lat albo więcej."),
-                    new ValidationRule<User>(u => !string.IsNullOrWhiteSpace(u.Email), "Email jest wymagany."),
-                    new ValidationRule<User>(u => u.Email?.IndexOf('@') > 0, "Email mus byc poprawny."),
+                    new ValidationRule<User>(u => !string.IsNullOrWhiteSpace(u.Name), "Has to have a name."),
+                    new ValidationRule<User>(u => u.Age >= 18, "Has to be adult."),
+                    new ValidationRule<User>(u => !string.IsNullOrWhiteSpace(u.Email), "Email is required."),
+                    new ValidationRule<User>(u => u.Email?.IndexOf('@') > 0, "Email has to be in correct format."),
                 }),
             };
 
             var validationResult = (user as IValidatable<User>)?.Validate();
-
             Console.WriteLine(validationResult?.ToString());
 
             Console.ReadKey();
         }
     }
 
-    public class User : IValidatable<User>
+    class User : IValidatable<User>
     {
         public string Name { get; set; }
 

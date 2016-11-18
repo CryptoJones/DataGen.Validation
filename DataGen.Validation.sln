@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validation", "Validation\Validation.csproj", "{CF5706AE-28C6-4B5E-8C4C-83428B33F639}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGen.Validation.Example1", "DataGen.Validation.Example1\DataGen.Validation.Example1.csproj", "{CF5706AE-28C6-4B5E-8C4C-83428B33F639}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationReversed", "ValidationReversed\ValidationReversed.csproj", "{76B5C42C-3A52-42E8-95EB-75043BBB040E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGen.Validation.Example2", "DataGen.Validation.Example2\DataGen.Validation.Example2.csproj", "{76B5C42C-3A52-42E8-95EB-75043BBB040E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validation.Core", "Validation.Core\Validation.Core.csproj", "{6B336CC1-EA24-406E-A22A-53FF18F0A76B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGen.Validation.UnitTests", "DataGen.Validation.UnitTests\DataGen.Validation.UnitTests.csproj", "{5352AC01-3B67-4C6F-A0C2-AD7C11B13007}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGen.Validation", "DataGen.Validation\DataGen.Validation.csproj", "{6B336CC1-EA24-406E-A22A-53FF18F0A76B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +25,10 @@ Global
 		{76B5C42C-3A52-42E8-95EB-75043BBB040E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76B5C42C-3A52-42E8-95EB-75043BBB040E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76B5C42C-3A52-42E8-95EB-75043BBB040E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5352AC01-3B67-4C6F-A0C2-AD7C11B13007}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5352AC01-3B67-4C6F-A0C2-AD7C11B13007}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5352AC01-3B67-4C6F-A0C2-AD7C11B13007}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5352AC01-3B67-4C6F-A0C2-AD7C11B13007}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6B336CC1-EA24-406E-A22A-53FF18F0A76B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6B336CC1-EA24-406E-A22A-53FF18F0A76B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B336CC1-EA24-406E-A22A-53FF18F0A76B}.Release|Any CPU.ActiveCfg = Release|Any CPU
