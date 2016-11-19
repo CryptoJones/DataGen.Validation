@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using DataGen.Extensions;
+using System.Collections.Generic;
 using System.Linq;
 using Validation.Contracts;
 using Validation.Model;
@@ -22,7 +23,7 @@ namespace Validation.Providers
                 if (!rule.Run(instance))
                 {
                     result.Success = false;
-                    result.Errors?.Add(rule.ErrorMessage);
+                    result.Errors.Add(rule.ErrorMessage);
                 }
             }
 

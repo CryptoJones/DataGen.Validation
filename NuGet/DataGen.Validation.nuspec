@@ -11,7 +11,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Validation Engine.</description>
     <summary>Validation Engine.</summary>
-    <tags>.net c# validation validator validate rule engine</tags>
+    <tags>.net validation validator validate rule engine</tags>
     <copyright>Copyright © Karol Habczyk</copyright>
     <dependencies>
       <group>

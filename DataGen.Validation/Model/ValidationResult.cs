@@ -13,7 +13,7 @@ namespace Validation.Model
         public ValidationResult()
         {
             this.Success = true;
-            this.Errors = new List<string>();
+            this.InitializeErrors();
         }
        
         public void AddError(string error)
@@ -21,14 +21,19 @@ namespace Validation.Model
             this.Errors.Add(error);
         }
 
-        public void Clear()
+        public void ClearErrors()
         {
             this.Errors.Clear();
         }
 
-        public bool Contains(string error)
+        public bool ContainsError(string error)
         {
             return this.Errors.Contains(error);
+        }
+
+        public void InitializeErrors()
+        {
+            this.Errors = new List<string>();
         }
     }
 }

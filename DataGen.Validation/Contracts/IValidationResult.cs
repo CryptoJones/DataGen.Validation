@@ -14,8 +14,8 @@ namespace Validation.Contracts
 
         void AddError(string error);
 
-        void Clear();
+        void ClearErrors();
 
-        bool Contains(string error);
+        bool ContainsError(string error);
     }
 }
