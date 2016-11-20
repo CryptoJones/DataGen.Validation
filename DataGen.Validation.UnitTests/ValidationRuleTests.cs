@@ -16,8 +16,6 @@ namespace DataGen.Validation.UnitTests
         {
             var objectToValidate = new { PropertyToValidate = 3 };
             var validationRule = new ValidationRule<dynamic>(x => x.PropertyToValidate > 7, "PropertyToValidate has to be grater than seven.");
-            //var validationRules = new List<IValidationRule<dynamic>>() { validationRule };
-            //var validator = Substitute.For<IValidator<dynamic>>(validationRules);
 
             var actual = validationRule.Run(objectToValidate);
 
