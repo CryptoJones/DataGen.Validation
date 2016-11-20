@@ -20,6 +20,8 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="..\DataGen.Validation\bin\Release\DataGen.Validation.dll" target="lib\net40\DataGen.Validation.dll" />
+    <file src="..\DataGen.Validation\bin\Release\net40\DataGen.Validation.dll" target="lib\net40\DataGen.Validation.dll" />
+    <file src="..\DataGen.Validation\bin\Release\net45\DataGen.Validation.dll" target="lib\net45\DataGen.Validation.dll" />
+    <file src="..\DataGen.Validation\bin\Release\net46\DataGen.Validation.dll" target="lib\net46\DataGen.Validation.dll" />
   </files>
 </package>
