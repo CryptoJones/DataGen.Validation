@@ -1,6 +1,6 @@
 ﻿using Validation.Contracts;
 
-namespace DataGen.Validation.Extensions
+namespace DataGen.Validation
 {
     public static class ValidationExtensions
     {
